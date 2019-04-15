@@ -1,0 +1,202 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+.custom-brand {
+    color: cornflowerblue !important;
+}
+
+/*
+    Margins and paddings
+*/
+
+.m50 {
+    margin: 50px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mbt50 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.mbt25 {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+}
+
+.m0 {
+    margin: 0px !important;
+}
+
+.mb0 {
+    margin-bottom: 0px !important;
+}
+
+.mb25 {
+    margin-bottom: 25px !important;
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+}
+
+.mb75 {
+    margin-bottom: 75px !important;
+}
+
+.ml5 {
+    margin-left: 5px !important;
+}
+
+.ml50 {
+    margin-left: 50px !important;
+}
+
+.ml75 {
+    margin-left: 75px !important;
+}
+
+.ml15 {
+    margin-left: 15px !important;
+}
+
+.mr15 {
+    margin-right: 15px !important;
+}
+
+.p0 {
+    padding: 0px !important;
+}
+
+.pl0 {
+    padding-left: 0px !important;
+}
+
+.pl15 {
+    padding-left: 15px !important;
+}
+
+.pl25 {
+    padding-left: 25px !important;
+}
+
+/*.ddl {
+    padding: 7px 5px;
+    background-color: ghostwhite;
+}*/
+
+.flr {
+    float: right !important;
+}
+
+
+/*
+    Paginated table elements
+*/
+
+.pagination > .active > a {
+    background-color: cornflowerblue !important;
+}
+
+.pagination > li:not(.active) > a:hover {
+    color: darkslateblue !important;
+    border-color: cornflowerblue !important;
+    background-color: ghostwhite !important;
+}
+
+th > a, td > a {
+    color: cornflowerblue !important;
+}
+
+.search-container input[type=text] {
+    min-width: 200px;
+    padding: 6px;
+    font-size: 15px;
+    border: none;
+    background-color: ghostwhite;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    color: darkslateblue !important;
+    background-color: cornflowerblue;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+    .search-container button:hover {
+        color: cornflowerblue !important;
+        background-color: darkslateblue !important;
+    }
+
+    .search-container button:active {
+        color: ghostwhite !important;
+        background-color: darkslateblue !important;
+    }
+
+.btn-m-square-width {
+    min-width: 35px !important;
+    min-height: 25px !important;
+    padding: 10px;
+}
+
+.btn-s-square-width {
+    min-width: 25px !important;
+    min-height: 15px !important;
+    padding: 5px;
+}
+
+th > a:hover {
+    text-decoration: none;
+    color: darkslateblue !important;
+}
+
+th > a:active > i {
+    color: ghostwhite !important;
+}
+
+
+
+.cell > td {
+    vertical-align: middle !important;
+}
+
+.warning {
+    color: orange;
+}

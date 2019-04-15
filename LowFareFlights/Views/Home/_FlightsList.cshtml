@@ -1,0 +1,114 @@
+﻿@model LowFareFlights.Bll.ViewModels.FlightsVM
+
+@{
+    ViewBag.Title = "Flights";
+}
+
+<div class="data-ajax">
+
+    @if (Model.ErrorMessages.Count != 0)
+    {
+        foreach (var errorMessage in Model.ErrorMessages)
+        {
+            <h4 class="text-center">@errorMessage</h4>
+        }
+    }
+    else if (Model.Flights.Count == 0)
+    {
+        <h3 class="text-center">Search for flights.</h3>
+    }
+    else
+    {
+        <h3><i class="glyphicon glyphicon-plane"></i> @ViewBag.Title</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Number Of Passangers
+                </th>
+                <th>
+                    Origin Departure Airport
+                </th>
+                <th>
+                    Origin Departure Time
+                </th>
+                <th>
+                    Destination Arrival Airport
+                </th>
+                <th>
+                    Destination Arrival Time
+                </th>
+                <th>
+                    Destination Arrival Layovers
+                </th>
+
+                <th>
+                    Destination Departure Airport
+                </th>
+                <th>
+                    Destination Departure Time
+                </th>
+                <th>
+                    Origin Arrival Airport
+                </th>
+                <th>
+                    Origin Arrival Time
+                </th>
+                <th>
+                    Origin Arrival Layovers
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Valute
+                </th>
+            </tr>
+
+            @foreach (var item in Model.Flights)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberOfPassangers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OriginDepartureAirport)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OriginDepartureTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DestinationArrivalAirport)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DestinationArrivalTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DestinationArrivalLayovers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DestinationDepartureAirport)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DestinationDepartureTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OriginArrivalAirport)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OriginArrivalTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OriginArrivalLayovers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Currency)
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>

@@ -1,0 +1,73 @@
+﻿@model LowFareFlights.Bll.ViewModels.FlightsVM
+
+@{
+    ViewBag.Title = "Low Fare Flights";
+}
+
+
+<div class="container">
+    <div class="row mt40">
+        <form id="filter-form" data-action="@Url.Action("SearchFlights", "Home")" data-method="Post">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-2">
+                            <span>Number of passangers</span>
+                            <div class="input-field">
+                                @Html.TextBoxFor(model => model.NumberOfPassangers, new { @id = "number-of-passangers", @class = "other" })
+                                <span id="numeric-warning" class="warning hidden">Required field, must be a number</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-2">
+                            <span>Origin airport</span>
+                            <div class="input-field">
+                                @Html.TextBoxFor(model => model.OriginAirport, new { @id = "origin-airport", @class = "other" })
+                                <span id="origin-warning" class="warning hidden">Required field, check IATA code format (3 uppercase characters for given airport)</span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-2">
+                            <span>Destination airport</span>
+                            <div class="input-field">
+                                @Html.TextBoxFor(model => model.ArrivalAirport, new { @id = "arrival-airport", @class = "other" })
+                                <span id="arrival-warning" class="warning hidden">Required field, check IATA code format (3 uppercase characters for given airport)</span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-2">
+                            <span>Departure time</span>
+                            <div class="input-field">
+                                @Html.TextBoxFor(model => model.OriginDepartureDate, new { @id = "departure-date", @class = "other" })
+                                <span id="date-warning" class="warning hidden">Required field.</span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-2">
+                            <span>Return time</span>
+                            <div class="input-field">
+                                @Html.TextBoxFor(model => model.OriginArrivalDate, new { @id = "return-date", @class = "other" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-2">
+                            <span>Currency</span>
+                            <div class="input-field ">
+                                @Html.TextBoxFor(model => model.Currency, new { @id = "currency", @class = "other" })
+                                <span id="currency-warning" class="warning hidden">Required field, currencies must be eather USD, HRK or EUR. If left blank EUR is default.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1 col-md-1 col-md-push-5 mt20">
+                            <button type="submit" id="filter-btn" class="btn-lg btn-primary other">Find</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                @{ Html.RenderPartial("_FlightsList"); }
+            </div>
+        </form>
+    </div>
+</div>
